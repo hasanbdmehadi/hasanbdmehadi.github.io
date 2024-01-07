@@ -1,0 +1,140 @@
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body
+{
+    position: absolute;
+
+    width: 100%;
+}
+
+
+/* -----------------------------------
+   #Article Index
+-----------------------------------*/
+
+
+
+.bd-navbar
+{
+    position: absolute;
+    z-index: 999;
+    right: 5%;
+
+    width: 110px;
+
+    border: 0;
+    background-color: var(--color-base);
+}
+
+.bd-navbar-nav
+{
+    padding: 0;
+}
+
+.bd-navbar-nav .nav
+{
+    float: none;
+
+    margin: 0;
+}
+
+.bd-navbar-nav .nav > li
+{
+    display: block;
+    float: none;
+
+    height: 80px;
+}
+
+.bd-navbar-nav .nav > li a
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80px;
+    /*padding-top: 30px;*/
+
+    transition: color .3s ease;
+    text-align: center;
+}
+
+.bd-navbar-nav .nav > li a,
+.bd-navbar-nav .nav > li a:focus,
+.bd-navbar-nav .nav > li a:hover
+{
+    color: var(--color-brand2);
+}
+
+.bd-navbar-nav .nav > li.active a,
+.bd-navbar-nav .nav > li.active a:focus,
+.bd-navbar-nav .nav > li.active a:hover
+{
+    color: var(--color-base2);
+    background: var(--color-brand2);
+}
+
+.bd-navbar-nav .nav > li a:hover
+{
+    color: var(--color-base2);
+    background: var(--color-brand2);
+}
+
+
+.affix
+{
+    position: fixed;
+    top: 20px;
+}
+
+
+@media screen and (max-width: 1366px)
+{
+    .bd-navbar
+    {
+        right: 3%;
+
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .bd-navbar
+    {
+        right: 0;
+
+        width: 100%;
+    }
+
+    .bd-navbar-nav .nav > li
+    {
+        height: auto;
+    }
+
+    .bd-navbar-nav .nav > li a
+    {
+        font-size: 14px;
+
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .affix
+    {
+        position: fixed;
+        top: 0;
+    }
+}
